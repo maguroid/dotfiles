@@ -1,0 +1,42 @@
+{
+    "window.zoomLevel": 0,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "editor.formatOnSave": true,
+    "todo-tree.tree.showScanModeButton": false,
+    "workbench.iconTheme": "vscode-icons",
+    "tabnine.experimentalAutoImports": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.tabSize": 2,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "liveSassCompile.settings.autoprefix": [],
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "/dist/css"
+        }
+    ],
+    "auto-close-tag.activationOnLanguage": [
+    "#0000"
+        "xml",
+        "php",
+        "blade",
+        "ejs",
+        "jinja",
+        // "javascript",
+        "javascriptreact",
+        // "typescript",
+        "typescriptreact",
+        "plaintext",
+        "markdown",
+        "vue",
+        "liquid",
+        "erb",
+        "lang-cfml",
+        "cfml",
+        "HTML (EEx)",
+        "HTML (Eex)",
+        "plist"
+    ]
+}
