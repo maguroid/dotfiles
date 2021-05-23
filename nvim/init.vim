@@ -71,10 +71,3 @@ nmap <Tab> :tabnext<Return>
 
 " Insert Mode
 inoremap <silent> jj <ESC>:<C-u>w<CR> " InsertMode抜けて保存
-" Insert mode movekey bind
-inoremap <C-d> <BS>
-inoremap <C-h> <Left>                                                                                                                 
-inoremap <C-l> <Right>
-inoremap <C-k> <Up>                          
-inoremap <C-j> <Down>
-
