@@ -1,6 +1,9 @@
 # 自作コマンドへのpath
 export PATH=$HOME/bin:$PATH
 
+# dotfileに設定ファイルを記述
+export XDG_CONFIG_HOME=$HOME/dotfiles
+  
 
 export LANG=ja_JP.UTF-8
 
@@ -41,16 +44,33 @@ alias fb='firebase'
 alias am='amplify'
 alias amp='amplify'
 
-# Git
+# git-promptの読み込み
+source ~/.zsh/git-prompt.sh
+
+# git-completionの読み込み
 fpath=(~/.zsh $fpath)
-if [ -f ${HOME}/.zsh/git-completion.zsh ]; then
-       zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.zsh
-fi
-if [ -f ${HOME}/.zsh/git-prompt.sh ]; then
-       source ${HOME}/.zsh/git-prompt.sh
-fi
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+autoload -Uz compinit && compinit
+
+# プロンプトのオプション表示設定
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
-setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
+
+# プロンプトの表示設定(好きなようにカスタマイズ可)
+setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
+\$ '
+
+# cdなしでディレクトリ移動
+setopt auto_cd
+
+# ビープ音の停止
+setopt no_beep
+
+# ビープ音の停止(補完時)
+setopt nolistbeep
+
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"

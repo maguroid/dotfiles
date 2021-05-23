@@ -1,7 +1,6 @@
 {
     "window.zoomLevel": 0,
-    "terminal.integrated.shell.osx": "/bin/zsh",
-    "editor.formatOnSave": true,
+    "terminal.integrated.defaultProfile.osx": "/bin/zsh",
     "todo-tree.tree.showScanModeButton": false,
     "workbench.iconTheme": "vscode-icons",
     "tabnine.experimentalAutoImports": true,
@@ -18,7 +17,7 @@
         }
     ],
     "auto-close-tag.activationOnLanguage": [
-    "#0000"
+    "#0000",
         "xml",
         "php",
         "blade",
@@ -38,5 +37,10 @@
         "HTML (EEx)",
         "HTML (Eex)",
         "plist"
-    ]
+    ],
+    "omnisharp.disableMSBuildDiagnosticWarning": true,
+    "omnisharp.useGlobalMono": "always",
+    "omnisharp.monoPath": "/Library/Frameworks/Mono.framework/Versions/Current",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

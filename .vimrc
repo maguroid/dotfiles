@@ -1,4 +1,37 @@
+" dein.vimの設定
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/Users/ryamaguchi/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin('/Users/ryamaguchi/.cache/dein')
+
+" Let dein manage dein
+" Required:
+call dein#add('/Users/ryamaguchi/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+" Add or remove your plugins here like this:
+"call dein#add('Shougo/neosnippet.vim')
+"call dein#add('Shougo/neosnippet-snippets')
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+
 " 行番号を表示
+
 set number
 " backspaceを有効化
 set backspace=indent,eol,start
