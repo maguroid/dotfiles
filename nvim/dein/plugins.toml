@@ -39,3 +39,18 @@ hook_add = '''
     nnoremap <silent> gpl :Gpull<CR>                                    
 '''    
 
+
+[[plugins]]
+repo = 'glacambre/firenvim'
+hook_post_update = '''
+    call firenvim#install(0)
+'''
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+hook_add = '''
+    vnoremap / :'<,'>TComment<CR>
+'''
+
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'

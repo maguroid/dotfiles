@@ -1,0 +1,7 @@
+{
+  "localSettings": {
+    ".*": {
+      "selector": 'textarea:not([readonly]), div[role="textbox"]'
+    }
+  }
+}

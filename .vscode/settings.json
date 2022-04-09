@@ -1,46 +1,112 @@
 {
-    "window.zoomLevel": 0,
-    "terminal.integrated.defaultProfile.osx": "/bin/zsh",
-    "todo-tree.tree.showScanModeButton": false,
-    "workbench.iconTheme": "vscode-icons",
-    "tabnine.experimentalAutoImports": true,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "editor.tabSize": 2,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "liveSassCompile.settings.autoprefix": [],
-    "liveSassCompile.settings.formats": [
-        {
-            "format": "compressed",
-            "extensionName": ".css",
-            "savePath": "/dist/css"
-        }
-    ],
-    "auto-close-tag.activationOnLanguage": [
+  "auto-close-tag.activationOnLanguage": [
     "#0000",
-        "xml",
-        "php",
-        "blade",
-        "ejs",
-        "jinja",
-        // "javascript",
-        "javascriptreact",
-        // "typescript",
-        "typescriptreact",
-        "plaintext",
-        "markdown",
-        "vue",
-        "liquid",
-        "erb",
-        "lang-cfml",
-        "cfml",
-        "HTML (EEx)",
-        "HTML (Eex)",
-        "plist"
-    ],
-    "omnisharp.disableMSBuildDiagnosticWarning": true,
-    "omnisharp.useGlobalMono": "always",
-    "omnisharp.monoPath": "/Library/Frameworks/Mono.framework/Versions/Current",
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascriptreact",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (EEx)",
+    "HTML (Eex)",
+    "plist"
+  ],
+  "bracketPairColorizer.depreciation-notice": false,
+  "editor.cursorStyle": "line",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.lineNumbers": "on",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 4,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "go.formatTool": "gofmt",
+  "go.testOnSave": true,
+  "go.toolsManagement.autoUpdate": true,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.tabSize": 4
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  "[javascriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer",
+    "editor.tabSize": 4
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  "leetcode.filePath": {
+    "default": {
+      "filename": "${id}.${kebab-case-name}.${ext}",
+      "folder": ""
+    },
+    "golang": {
+      "filename": "${id}.${kebab-case-name}.${ext}",
+      "folder": "go/"
+    },
+    "rust": {
+      "filename": "s${id}_${snake_case_name}.${ext}",
+      "folder": "rust/src/solutions/"
+    }
+  },
+  "leetcode.hint.commandShortcut": false,
+  "leetcode.hint.commentDescription": false,
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.hint.setDefaultLanguage": false,
+  "leetcode.defaultLanguage": "rust",
+  "leetcode.showDescription": "In Webview",
+  "leetcode.nodePath": "/Users/ryamaguchi/.volta/bin/node",
+  "leetcode.workspaceFolder": "/Users/ryamaguchi/ghq/github.com/maguroid/leetcode",
+  "omnisharp.disableMSBuildDiagnosticWarning": true,
+  "omnisharp.monoPath": "/Library/Frameworks/Mono.framework/Versions/Current",
+  "omnisharp.useGlobalMono": "always",
+  "solidity.compileUsingRemoteVersion": "v0.8.10",
+  "[solidity]": {
+    "editor.defaultFormatter": "JuanBlanco.solidity",
+    "editor.tabSize": 2,
+    "editor.autoClosingQuotes": "always"
+  },
+  "tabnine.experimentalAutoImports": true,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.iconTheme": "vscode-icons",
+  "cSpell.userWords": [
+    "browserslist",
+    "cids",
+    "composables",
+    "hdwallet",
+    "multihashes",
+    "Numberish",
+    "trufflesuite"
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.acceptSuggestionOnEnter": "off",
+  "remote.SSH.defaultExtensions": ["gitpod.gitpod-remote-ssh"],
+  "remote.SSH.configFile": "/var/folders/_w/n7tm7yys7lsccp0_22pqc5t00000gn/T/gitpod_ssh_config-59997-tqIDbHAHmjsz",
+  "editor.accessibilitySupport": "off"
 }

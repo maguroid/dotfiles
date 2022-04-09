@@ -20,13 +20,11 @@ if dein#load_state(s:dein_dir)
   let g:rc_dir    = expand('~/dotfiles/nvim/dein')
   let s:toml      = g:rc_dir . '/plugins.toml'
   " let s:lazy_toml = g:rc_dir . '/plugins_lazy.toml'
-  let s:node_toml = g:rc_dir . '/node.toml'
   let s:python_toml = g:rc_dir . '/python.toml'
 
   " TOML を読み込み、キャッシュしておく
   call dein#load_toml(s:toml,      {'lazy': 0})
   " call dein#load_toml(s:lazy_toml, {'lazy': 1})
-  call dein#load_toml(s:node_toml, {'lazy': 0})
   call dein#load_toml(s:python_toml, {'lazy': 0})
 
   " 設定終了
