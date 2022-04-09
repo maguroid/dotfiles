@@ -1,3 +1,5 @@
+local lsp_installer = require("nvim-lsp-installer")
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -31,14 +33,37 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'rust_analyzer', 'tsserver' }
-for _, lsp in pairs(servers) do
-  require('lspconfig')[lsp].setup {
-    on_attach = on_attach,
-    flags = {
-      -- This will be the default in neovim 0.7+
-      debounce_text_changes = 150,
-    }
-  }
+
+local servers = {
+  'pyright',
+  'rust_analyzer',
+  'tsserver',
+  'gopls',
+  'jsonls',
+  'taplo',
+  'zk',
+  'dokerls',
+  'bashls',
+  'grqphql',
+  'html',
+  'sumneko_lua'
+
+}
+
+for _, name in pairs(servers) do
+  local server_is_found, server = lsp_installer.get_server(name)
+  if server_is_found and not server:is_installed() then
+    print("Installing " .. name)
+    server:install()
+  end
 end
 
+
+lsp_installer.on_server_ready(function(server)
+-- Specify the default options which we'll use to setup all servers
+  local default_opts = {
+    on_attach = on_attach,
+  }
+
+  server:setup(default_opts)
+end)

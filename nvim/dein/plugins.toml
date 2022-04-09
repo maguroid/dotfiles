@@ -54,3 +54,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
+hook_add = '''
+lua require("lsp_config")
+'''
+
+[[plugins]]
+repo = 'williamboman/nvim-lsp-installer'
