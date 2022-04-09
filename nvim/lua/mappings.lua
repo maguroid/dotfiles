@@ -20,3 +20,9 @@ m.nmap([[<Tab>]], [[:tabnext<Return>]])
 -- Open NERDTree {{
 m.map([[<C-n>]], [[:NERDTreeToggle<CR>]])
 -- }}
+
+-- Git {{
+m.nnoremap([[gs]], [[:Git<CR><C-w>T]], m.silent)
+m.nnoremap([[gps]], [[:Git push<CR>]], m.silent)
+m.nnoremap([[gpl]], [[:Git pull<CR>]], m.silent)
+-- }}

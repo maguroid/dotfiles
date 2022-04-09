@@ -13,7 +13,12 @@ require'packer'.startup(function()
     'airblade/vim-gitgutter',
     'tomtom/tcomment_vim',
     'neovim/nvim-lspconfig',
-    'williamboman/nvim-lsp-installer'
+    'williamboman/nvim-lsp-installer',
+    'tpope/vim-fugitive'
   }
-  use{'wbthomason/packer.nvim', opt=true}
+  use {
+    'glacambre/firenvim',
+    run = function() vim.fn['firenvim#install'](0) end
+  }
+  use {'wbthomason/packer.nvim', opt=true }
 end)
