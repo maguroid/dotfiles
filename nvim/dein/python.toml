@@ -1,7 +1,0 @@
-# 補完
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add = '''
-  source $XDG_CONFIG_HOME/nvim/plugins/denite.vim
-'''
-
