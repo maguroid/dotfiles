@@ -40,11 +40,10 @@ require'packer'.startup(function()
     requires = 'kyazdani42/nvim-web-devicons',
     config = function() require('trouble').setup{} end
   }
-  use {'wbthomason/packer.nvim', opt=true }
   use {
     'tzachar/cmp-tabnine',
     run = './install.sh',
     requires = 'hrsh7th/nvim-cmp'
   }
-
+  use {'wbthomason/packer.nvim', opt=true }
 end)
