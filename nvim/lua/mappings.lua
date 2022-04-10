@@ -1,5 +1,7 @@
 local m = require'mapx'.setup{}
 
+vim.g.mapleader = ";"
+
 -- Split window {{
 m.nmap([[ss]], [[:split<Return><C-w>w]])
 m.nmap([[sv]], [[:vsplit<Return><C-w>w]])
@@ -25,4 +27,13 @@ m.map([[<C-n>]], [[:NERDTreeToggle<CR>]])
 m.nnoremap([[gs]], [[:Git<CR><C-w>T]], m.silent)
 m.nnoremap([[gps]], [[:Git push<CR>]], m.silent)
 m.nnoremap([[gpl]], [[:Git pull<CR>]], m.silent)
+-- }}
+
+-- Trouble {{
+m.nnoremap([[<Leader>xx]], [[:TroubleToggle<CR>]])
+m.nnoremap([[<Leader>xw]], [[:TroubleToggle workspace_diagnostics<CR>]])
+m.nnoremap([[<Leader>xd]], [[:TroubleToggle document_diagnostics<CR>]])
+m.nnoremap([[<Leader>xq]], [[:TroubleToggle quickfix<CR>]])
+m.nnoremap([[<Leader>xl]], [[:TroubleToggle loclist<CR>]])
+m.nnoremap([[gR]], [[:TroubleToggle<CR>]])
 -- }}

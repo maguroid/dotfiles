@@ -60,10 +60,8 @@ end
 
 
 lsp_installer.on_server_ready(function(server)
--- Specify the default options which we'll use to setup all servers
-  local default_opts = {
-    on_attach = on_attach,
-  }
+  opts.on_attach = on_attacn
+  opts.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-  server:setup(default_opts)
+  server:setup(opts)
 end)
