@@ -37,3 +37,8 @@ m.nnoremap([[<Leader>xq]], [[:TroubleToggle quickfix<CR>]])
 m.nnoremap([[<Leader>xl]], [[:TroubleToggle loclist<CR>]])
 m.nnoremap([[gR]], [[:TroubleToggle<CR>]])
 -- }}
+
+-- Packer {{
+m.noremap([[<Leader>pi]], [[:PackerInstall<CR>]])
+m.noremap([[<Leader>ps]], [[:PackerSync<CR>]])
+-- }}

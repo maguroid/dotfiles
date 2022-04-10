@@ -12,8 +12,10 @@ require'packer'.startup(function()
     'tpope/vim-surround',
     'airblade/vim-gitgutter',
     'tomtom/tcomment_vim',
+    -- Language Server
     'neovim/nvim-lspconfig',
     'williamboman/nvim-lsp-installer',
+    -- Completion
     'tpope/vim-fugitive',
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
@@ -21,6 +23,8 @@ require'packer'.startup(function()
     'hrsh7th/cmp-buffer',
     'hrsh7th/vim-vsnip',
     'hrsh7th/cmp-nvim-lsp-signature-help',
+    'hrsh7th/cmp-nvim-lua',
+    'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind-nvim'
   }
   use {
@@ -37,4 +41,10 @@ require'packer'.startup(function()
     config = function() require('trouble').setup{} end
   }
   use {'wbthomason/packer.nvim', opt=true }
+  use {
+    'tzachar/cmp-tabnine',
+    run = './install.sh',
+    requires = 'hrsh7th/nvim-cmp'
+  }
+
 end)
