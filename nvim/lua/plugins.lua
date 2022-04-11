@@ -25,7 +25,9 @@ require'packer'.startup(function()
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-nvim-lua',
     'saadparwaiz1/cmp_luasnip',
-    'onsails/lspkind-nvim'
+    'onsails/lspkind-nvim',
+    -- Auto close
+    'Raimondi/delimitMate'
   }
   use {
     'glacambre/firenvim',
@@ -44,6 +46,10 @@ require'packer'.startup(function()
     'tzachar/cmp-tabnine',
     run = './install.sh',
     requires = 'hrsh7th/nvim-cmp'
+  }
+  use {
+    'subnut/nvim-ghost.nvim',
+    run = ':call nvim_ghost#installer#install()'
   }
   use {'wbthomason/packer.nvim', opt=true }
 end)

@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/Users/ryamaguchi/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  delimitMate = {
+    loaded = true,
+    path = "/Users/ryamaguchi/.local/share/nvim/site/pack/packer/start/delimitMate",
+    url = "https://github.com/Raimondi/delimitMate"
+  },
   firenvim = {
     loaded = true,
     path = "/Users/ryamaguchi/.local/share/nvim/site/pack/packer/start/firenvim",
@@ -138,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ryamaguchi/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-ghost.nvim"] = {
+    loaded = true,
+    path = "/Users/ryamaguchi/.local/share/nvim/site/pack/packer/start/nvim-ghost.nvim",
+    url = "https://github.com/subnut/nvim-ghost.nvim"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
