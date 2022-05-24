@@ -5,35 +5,29 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# 自作コマンドへのpath
-export PATH=$HOME/bin:$PATH
-
-# dotfileに設定ファイルを記述
+# paths
 export XDG_CONFIG_HOME=$HOME/dotfiles
-
+export GOENV_ROOT="$HOME/.goenv"
+export PATH=$HOME/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.anyenv/bin:$PATH"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="$GOENV_ROOT/bin:$PATH"
+export PATH="$PATH:/Users/ryamaguchi/.foundry/bin"
   
+eval "$(goenv init -)"
 
+# display settings
 export LANG=ja_JP.UTF-8
 
-export CLICOLOR=1
+# completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # expanded completion
+fpath=(~/.zsh $fpath)
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+autoload -Uz compinit && compinit
 
-
-# 色を使用出来るようにする
-autoload -Uz colors
-colors
-
-# emacs 風キーバインドにする
-bindkey -e
-
-# 補完機能を有効にする
-autoload -Uz compinit
-compinit
-
-# 補完で小文字でも大文字にマッチさせる
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# エイリアス設定
+# keys
+bindkey -e # emacs-like key binding
 alias ll='ls -l'
 alias la='ls -a'
 alias be='bundle exec'
@@ -53,6 +47,7 @@ alias gad='git add'
 alias gcom='git commit'
 alias gpl='git pull'
 alias gps='git push'
+alias gpsh='git push origin head'
 alias gpom='git pull origin master'
 alias gmm='git merge master'
 alias sl='serverless'
@@ -65,39 +60,21 @@ alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 alias ojt='oj test -c "go run main.go" -d tests/sample'
 alias ojt:rand='oj test -c "go run main.go" -d tests/random'
 
-# git-promptの読み込み
-source ~/.zsh/git-prompt.sh
-
-# git-completionの読み込み
-fpath=(~/.zsh $fpath)
-zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-autoload -Uz compinit && compinit
-
-# プロンプトのオプション表示設定
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWSTASHSTATE=true
-GIT_PS1_SHOWUPSTREAM=auto
-
-# プロンプトの表示設定(好きなようにカスタマイズ可)
-setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
-\$ '
-
-# cdなしでディレクトリ移動
+# options
 setopt auto_cd
-
-# ビープ音の停止
 setopt no_beep
-
-# ビープ音の停止(補完時)
 setopt nolistbeep
 
-# anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
+# tools
+
+## aws
+export AWS_DEFAULT_PROFILE="mates-dev"
+
+## anyenv
 eval "$(anyenv init -)"
 export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 
+## zinit
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -127,9 +104,3 @@ zinit light zsh-users/zsh-syntax-highlighting
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
-
-export PATH="$PATH:/Users/ryamaguchi/.foundry/bin"
