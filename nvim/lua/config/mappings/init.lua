@@ -18,6 +18,10 @@ m.map([[sl]], [[<C-w>l]])
 m.nmap([[<S-Tab>]], [[:tabprev<Return>]])
 m.nmap([[<Tab>]], [[:tabnext<Return>]])
 -- }}
+-- Keep Visual Mode after indent
+m.vnoremap([[<]], [[<gv]])
+m.vnoremap([[>]], [[>gv]])
+-- }}
 
 -- Open NERDTree {{
 m.map([[<C-n>]], [[:NERDTreeToggle<CR>]])

@@ -1,25 +1,4 @@
 {
-  "auto-close-tag.activationOnLanguage": [
-    "#0000",
-    "xml",
-    "php",
-    "blade",
-    "ejs",
-    "jinja",
-    "javascriptreact",
-    "typescriptreact",
-    "plaintext",
-    "markdown",
-    "vue",
-    "liquid",
-    "erb",
-    "lang-cfml",
-    "cfml",
-    "HTML (EEx)",
-    "HTML (Eex)",
-    "plist"
-  ],
-  "bracketPairColorizer.depreciation-notice": false,
   "editor.cursorStyle": "line",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
@@ -29,84 +8,150 @@
   "editor.tabSize": 4,
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "go.formatTool": "gofmt",
-  "go.testOnSave": true,
-  "go.toolsManagement.autoUpdate": true,
-  "[go]": {
-    "editor.defaultFormatter": "golang.go",
-    "editor.tabSize": 4
-  },
+  "files.insertFinalNewline": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {
     "editor.tabSize": 2,
     "editor.codeActionsOnSave": {
-      "source.fixAll": true
+      "source.fixAll": "explicit"
     }
   },
   "[javascriptreact]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll": true
+      "source.fixAll": "explicit"
     }
   },
   "[rust]": {
-    "editor.defaultFormatter": "matklad.rust-analyzer",
     "editor.tabSize": 4
   },
   "[typescriptreact]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll": true
+      "source.fixAll": "explicit"
     }
   },
-  "leetcode.filePath": {
-    "default": {
-      "filename": "${id}.${kebab-case-name}.${ext}",
-      "folder": ""
-    },
-    "golang": {
-      "filename": "${id}.${kebab-case-name}.${ext}",
-      "folder": "go/"
-    },
-    "rust": {
-      "filename": "s${id}_${snake_case_name}.${ext}",
-      "folder": "rust/src/solutions/"
-    }
-  },
-  "leetcode.hint.commandShortcut": false,
-  "leetcode.hint.commentDescription": false,
-  "leetcode.hint.configWebviewMarkdown": false,
-  "leetcode.hint.setDefaultLanguage": false,
-  "leetcode.defaultLanguage": "rust",
-  "leetcode.showDescription": "In Webview",
-  "leetcode.nodePath": "/Users/ryamaguchi/.volta/bin/node",
-  "leetcode.workspaceFolder": "/Users/ryamaguchi/ghq/github.com/maguroid/leetcode",
-  "omnisharp.disableMSBuildDiagnosticWarning": true,
-  "omnisharp.monoPath": "/Library/Frameworks/Mono.framework/Versions/Current",
-  "omnisharp.useGlobalMono": "always",
-  "solidity.compileUsingRemoteVersion": "v0.8.10",
-  "[solidity]": {
-    "editor.defaultFormatter": "JuanBlanco.solidity",
-    "editor.tabSize": 2,
-    "editor.autoClosingQuotes": "always"
-  },
-  "tabnine.experimentalAutoImports": true,
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.iconTheme": "vscode-icons",
-  "cSpell.userWords": [
-    "browserslist",
-    "cids",
-    "composables",
-    "hdwallet",
-    "multihashes",
-    "Numberish",
-    "trufflesuite"
+  "tailwindCSS.experimental.classRegex": [
+    ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
+  // "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "workbench.iconTheme": "material-icon-theme",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.acceptSuggestionOnEnter": "off",
-  "remote.SSH.defaultExtensions": ["gitpod.gitpod-remote-ssh"],
-  "remote.SSH.configFile": "/var/folders/_w/n7tm7yys7lsccp0_22pqc5t00000gn/T/gitpod_ssh_config-59997-tqIDbHAHmjsz",
-  "editor.accessibilitySupport": "off"
+  "editor.accessibilitySupport": "off",
+  "vim.statusBarColorControl": false,
+  "vim.neovimUseConfigFile": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-n>"],
+      "after": ["g", "b"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<esc>"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": [{ "command": "editor.action.insertCursorAbove" }]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": [{ "command": "editor.action.insertCursorBelow" }]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    }
+  ],
+  "keyboard.dispatch": "code",
+  "window.restoreFullscreen": true,
+  "window.newWindowDimensions": "maximized",
+  "vim.neovimPath": "/opt/homebrew/bin/nvim",
+  "vim.neovimConfigPath": "~/dotfiles/nvim/init.lua",
+  "vim.enableNeovim": true,
+  "vim.surround": true,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  // saving cpu usage
+  "files.exclude": {
+    "/.git": true,
+    "/.DS_Store": true,
+    "/node_modules": true,
+    "/node_modules/": true
+  },
+  "search.exclude": {
+    "/node_modules": true
+  },
+  "files.watcherExclude": {
+    "/node_modules/": true
+  },
+  "vyper.command": "arch -x86_64 vyper",
+  "yaml.schemas": {
+    "file:///Users/ryamaguchi/.vscode/extensions/docsmsft.docs-yaml-1.0.1/dist/toc.schema.json": "/toc\\.yml/i"
+  },
+  "typescript.tsserver.log": "off",
+  "redhat.telemetry.enabled": false,
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "solidity.telemetry": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "scss.lint.unknownAtRules": "ignore",
+  "hediet.vscode-drawio.theme": "min",
+  "editor.inlineSuggest.enabled": true,
+  "workbench.colorTheme": "GitHub Dark",
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[bats]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "haskell.manageHLS": "GHCup",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "cSpell.enableFiletypes": ["solidity"],
+  "cSpell.userWords": ["calldatacopy"],
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "leetcode-problem-rating.workspaceFolder": "",
+  "[javascript][javascriptreact][typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    }
+  },
+  "gitlens.views.searchAndCompare.files.layout": "list",
+  "vsicons.dontShowNewVersionMessage": true,
+  "githubPullRequests.pullBranch": "never",
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "githubPullRequests.fileListLayout": "tree"
 }

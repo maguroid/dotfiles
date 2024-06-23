@@ -53,5 +53,85 @@
     "key": "f12",
     "command": "-editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "cmd+k s",
+    "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "ctrl+alt+cmd+[IntlYen]",
+    "command": "-workbench.action.splitEditor"
+  },
+  {
+    "key": "cmd+k l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "cmd+k cmd+right",
+    "command": "-workbench.action.focusRightGroup"
+  },
+  {
+    "key": "cmd+k h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "cmd+k cmd+left",
+    "command": "-workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "cmd+k cmd+down",
+    "command": "-workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "cmd+k cmd+up",
+    "command": "-workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "cmd+k l",
+    "command": "-quokka.createFile",
+    "when": "!quokka.isLiveShareClient && !terminalFocus"
+  },
+  {
+    "key": "cmd+k s",
+    "command": "-quokka.stopCurrent",
+    "when": "quokka.hasActiveSession && !quokka.isLiveShareClient && !terminalFocus"
+  },
+  {
+    "key": "cmd+k s",
+    "command": "-workbench.action.files.saveWithoutFormatting"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "-mysql.runSQL",
+    "when": "editorLangId == 'cql' || editorLangId == 'sql'"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "-mysql.mock.run",
+    "when": "resourceFilename =~ /mock\\.json$/"
+  },
+  {
+    "key": "cmd+k c",
+    "command": "inlineChat.start",
+    "when": "inlineChatHasProvider && !editorReadonly"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-inlineChat.start",
+    "when": "inlineChatHasProvider && !editorReadonly"
+  },
+  {
+    "key": "cmd+k c",
+    "command": "-workbench.files.action.compareWithClipboard"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-inlineChat.start",
+    "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
   }
 ]

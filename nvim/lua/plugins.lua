@@ -26,8 +26,22 @@ require'packer'.startup(function()
     'hrsh7th/cmp-nvim-lua',
     'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind-nvim',
-    -- Auto close
-    'Raimondi/delimitMate'
+    -- Syntax
+    'Raimondi/delimitMate',
+    'uarun/vim-protobuf',
+    'puremourning/vimspector'
+  }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+  use {
+    'lewis6991/spellsitter.nvim',
+    config = function()
+      require 'spellsitter'.setup {
+        enable = true,
+      }
+    end
   }
   use {
     'glacambre/firenvim',
@@ -41,15 +55,6 @@ require'packer'.startup(function()
     'folke/trouble.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
     config = function() require('trouble').setup{} end
-  }
-  use {
-    'tzachar/cmp-tabnine',
-    run = './install.sh',
-    requires = 'hrsh7th/nvim-cmp'
-  }
-  use {
-    'subnut/nvim-ghost.nvim',
-    run = ':call nvim_ghost#installer#install()'
   }
   use {'wbthomason/packer.nvim', opt=true }
 end)
