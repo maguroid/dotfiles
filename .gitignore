@@ -3,3 +3,11 @@
 /NuGet
 /stetic
 /xbuild
+/.wrangler
+/backup
+
+# zsh
+.zcompdump
+.zcompdump.*
+.zsh_history
+.zim

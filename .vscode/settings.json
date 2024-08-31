@@ -97,9 +97,7 @@
     "/node_modules/": true
   },
   "vyper.command": "arch -x86_64 vyper",
-  "yaml.schemas": {
-    "file:///Users/ryamaguchi/.vscode/extensions/docsmsft.docs-yaml-1.0.1/dist/toc.schema.json": "/toc\\.yml/i"
-  },
+  "yaml.schemas": {},
   "typescript.tsserver.log": "off",
   "redhat.telemetry.enabled": false,
   "[shellscript]": {
