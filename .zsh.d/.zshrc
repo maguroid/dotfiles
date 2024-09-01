@@ -14,7 +14,6 @@ fi
 if [ -d $ZDOTDIR -a -r $ZDOTDIR -a -x $ZDOTDIR ]; then
   for file in $ZDOTDIR/hooks/**/*.zsh; do
     if [ -r $file ]; then
-      echo "Loading $file"
       source $file
     fi
   done

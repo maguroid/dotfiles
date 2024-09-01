@@ -1,8 +1,4 @@
-alias ll='ls -l'
-alias la='ls -a'
 alias be='bundle exec'
-alias ll='ls -t'
-alias la='ls -la'
 alias vi='vim'
 alias ai='cursor'
 alias d='docker'
