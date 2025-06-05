@@ -1,7 +1,62 @@
 {
+  "[bats]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[javascript][typescript][javascriptreact][typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "quickfix.biome": "explicit",
+      "source.fixAll.biome": "explicit"
+    }
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[rust]": {
+    "editor.tabSize": 4
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[solidity]": {
+    "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    }
+  },
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+  "cSpell.userWords": [
+    "calldatacopy",
+    "dont",
+    "esbenp",
+    "foxundermoon",
+    "nvim",
+    "vscodevim",
+    "vsicons"
+  ],
+  "diffEditor.hideUnchangedRegions.enabled": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.accessibilitySupport": "off",
   "editor.cursorStyle": "line",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
   "editor.insertSpaces": true,
   "editor.lineNumbers": "on",
   "editor.suggestSelection": "first",
@@ -13,44 +68,42 @@
   },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "files.exclude": {
+    "/.git": true,
+    "/.DS_Store": true,
+    "/node_modules": true,
+    "/node_modules/": true
+  },
   "files.insertFinalNewline": true,
+  "files.watcherExclude": {
+    "/node_modules/": true
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "githubPullRequests.fileListLayout": "tree",
+  "githubPullRequests.pullBranch": "never",
+  "gitlens.views.searchAndCompare.files.layout": "list",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "[javascript]": {
-    "editor.tabSize": 2,
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    }
+  "keyboard.dispatch": "code",
+  "redhat.telemetry.enabled": false,
+  "scss.lint.unknownAtRules": "ignore",
+  "search.exclude": {
+    "/node_modules": true
   },
-  "[javascriptreact]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    }
-  },
-  "[rust]": {
-    "editor.tabSize": 4
-  },
-  "[typescriptreact]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    }
-  },
-  "tailwindCSS.experimental.classRegex": [
-    ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ],
-  // "terminal.integrated.defaultProfile.osx": "zsh",
+  "security.promptForLocalFileProtocolHandling": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-  "workbench.iconTheme": "material-icon-theme",
+  "typescript.tsserver.log": "off",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.acceptSuggestionOnEnter": "off",
-  "editor.accessibilitySupport": "off",
-  "vim.statusBarColorControl": false,
-  "vim.neovimUseConfigFile": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<C-n>"],
-      "after": ["g", "b"]
-    }
-  ],
+  "vim.enableNeovim": true,
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
@@ -58,13 +111,32 @@
     },
     {
       "before": ["<C-k>"],
-      "commands": [{ "command": "editor.action.insertCursorAbove" }]
+      "commands": [
+        {
+          "command": "editor.action.insertCursorAbove"
+        }
+      ]
     },
     {
       "before": ["<C-j>"],
-      "commands": [{ "command": "editor.action.insertCursorBelow" }]
+      "commands": [
+        {
+          "command": "editor.action.insertCursorBelow"
+        }
+      ]
     }
   ],
+  "vim.neovimConfigPath": "~/dotfiles/nvim/init.lua",
+  "vim.neovimPath": "/opt/homebrew/bin/nvim",
+  "vim.neovimUseConfigFile": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-n>"],
+      "after": ["g", "b"]
+    }
+  ],
+  "vim.statusBarColorControl": false,
+  "vim.surround": true,
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["<"],
@@ -75,81 +147,10 @@
       "commands": ["editor.action.indentLines"]
     }
   ],
-  "keyboard.dispatch": "code",
-  "window.restoreFullscreen": true,
-  "window.newWindowDimensions": "maximized",
-  "vim.neovimPath": "/opt/homebrew/bin/nvim",
-  "vim.neovimConfigPath": "~/dotfiles/nvim/init.lua",
-  "vim.enableNeovim": true,
-  "vim.surround": true,
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  // saving cpu usage
-  "files.exclude": {
-    "/.git": true,
-    "/.DS_Store": true,
-    "/node_modules": true,
-    "/node_modules/": true
-  },
-  "search.exclude": {
-    "/node_modules": true
-  },
-  "files.watcherExclude": {
-    "/node_modules/": true
-  },
-  "vyper.command": "arch -x86_64 vyper",
-  "yaml.schemas": {},
-  "typescript.tsserver.log": "off",
-  "redhat.telemetry.enabled": false,
-  "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "solidity.telemetry": true,
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "scss.lint.unknownAtRules": "ignore",
-  "hediet.vscode-drawio.theme": "min",
-  "editor.inlineSuggest.enabled": true,
-  "workbench.colorTheme": "GitHub Dark",
-  "[yaml]": {
-    "editor.tabSize": 2
-  },
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
-  "[properties]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[bats]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "haskell.manageHLS": "GHCup",
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": true,
-    "scminput": false
-  },
-  "cSpell.enableFiletypes": ["solidity"],
-  "cSpell.userWords": ["calldatacopy"],
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "leetcode-problem-rating.workspaceFolder": "",
-  "[javascript][javascriptreact][typescriptreact]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    }
-  },
-  "gitlens.views.searchAndCompare.files.layout": "list",
   "vsicons.dontShowNewVersionMessage": true,
-  "githubPullRequests.pullBranch": "never",
-  "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
-  },
-  "githubPullRequests.fileListLayout": "tree"
+  "vyper.command": "arch -x86_64 vyper",
+  "window.newWindowDimensions": "maximized",
+  "window.restoreFullscreen": true,
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme"
 }

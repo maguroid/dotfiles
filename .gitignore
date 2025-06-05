@@ -11,3 +11,5 @@
 .zcompdump.*
 .zsh_history
 .zim
+.zcompcache
+.zsh_sessions

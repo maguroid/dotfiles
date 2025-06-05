@@ -1,9 +1,4 @@
-# asdf
-. "$HOME/.asdf/asdf.sh"
-fpath=($HOME/.asdf/completions $fpath)
-
-# direnv (managed by asdf)
-eval "$(direnv hook zsh)"
+fpath=($ASDF_DIR/completions $fpath)
 
 # cargo
 . "$HOME/.cargo/env"

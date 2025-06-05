@@ -42,7 +42,7 @@ zmodule zsh-users/zsh-completions --fpath src
 # completion must be sourced after all modules that add completion definitions.
 zmodule completion
 # pnpm completion
-zmodule git@github.com:g-plane/pnpm-shell-completion.git --on-pull './zplug.zsh'
+# zmodule git@github.com:g-plane/pnpm-shell-completion.git --on-pull './zplug.zsh'
 
 #
 # Modules that must be initialized last
